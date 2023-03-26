@@ -22,9 +22,9 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-//Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::resource('posts',PostController::class);
-//});
+});
 
 
 require __DIR__.'/auth.php';
